@@ -1,19 +1,20 @@
 import java.util.Scanner;
 
 public class Main {
-
-    private final static String WELCOME_MESSAGE = "Olá, informe o seu nome";
-
     public static void main(String[] args) {
+        var scanner = new Scanner(System.in);
 
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println(WELCOME_MESSAGE);
+        System.out.println("Informe seu nome:");
         var name = scanner.next();
 
         System.out.println("Informe sua idade:");
         var age = scanner.nextInt();
 
-        System.out.printf("Olá %s, sua idade é %d%n", name, age);
+        if (age >= 17) {
+            System.out.printf("Olá %s! Você tem %d anos, você pode dirigir.\n", name, age);
+        }
+
+        System.out.println("Fim da execução");
     }
 }
+
